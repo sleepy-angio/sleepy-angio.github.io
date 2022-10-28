@@ -19,6 +19,7 @@ function onJqueryInitiated() {
         const shadowEl = $(shadowRoot.innerHTML);
         const h1 = shadowEl.find("h1");
         console.log("j", h1);
+        h1.innerHtml = h1.innerHtml + " (Im in a shadow dom)";
     } else {
         console.log('Cant find el');        
     }
