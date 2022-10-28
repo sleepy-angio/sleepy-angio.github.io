@@ -9,12 +9,22 @@ function defer(method) {
 }
 
 function onJqueryInitiated() {
-    const shadowWrapper = $('#shadow-wrapper')
+    const shadowWrapper = $('#shadow-wrapper');
+    const w = document.getElementById("shadow-wrapper");
+    
+    console.log(shadowWrapper, w);
+    
     if (shadowWrapper && shadowWrapper.shadowRoot) {
         const h1 = shadowWrapper.shadowRoot.find("h1");
         console.log(h1);
     } else {
         console.log('Cant find el');        
+    }
+    
+    if (w) {
+      console.log(w);
+      const h1 = w.shadowRoot?.querySelector("h1");
+      console.log(h1);
     }
 }
 
