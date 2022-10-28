@@ -9,20 +9,21 @@ function defer(method) {
 }
 
 function onJqueryInitiated() {
-    const shadowWrapper = $('#shadow-wrapper');
-    const w = document.getElementById("shadow-wrapper");
-    
-    console.log(shadowWrapper, w);
+    // jQuery
+    const shadowWrapper = $('#shadow-wrapper');   
     
     if (shadowWrapper && shadowWrapper[0].shadowRoot) {
         const shadowRoot = shadowWrapper[0].shadowRoot;
         const shadowEl = $(shadowRoot.innerHTML);
         const h1 = shadowEl.find("h1");
-        console.log("j", h1);
+        console.log("jQuery", h1);
         h1.innerHtml = h1.innerHtml + " (Im in a shadow dom)";
     } else {
         console.log('Cant find el');        
     }
+    
+    // Vanilla
+    const w = document.getElementById("shadow-wrapper");
     
     if (w) {
       console.log(w);
