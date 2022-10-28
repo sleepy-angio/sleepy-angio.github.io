@@ -10,19 +10,19 @@ function defer(method) {
 
 function onJqueryInitiated() {
     // jQuery
-   /* const shadowWrapper = $('#shadow-wrapper');   
+   const shadowWrapper = $('#shadow-wrapper');   
     
     if (shadowWrapper && shadowWrapper[0].shadowRoot) {
         const shadowRoot = shadowWrapper[0].shadowRoot;
         const shadowEl = $(shadowRoot.innerHTML);
-        const h1 = shadowEl.find("h1");
+        const h1 = shadowEl.find("h1")[0];
         console.log("jQuery", h1);
                 // This doesn not work
         h1.html(h1.innerHtml + " (Im in a shadow dom)");
     } else {
         console.log('Cant find el');        
     }
-    
+    /* 
     // Vanilla
     const w = document.getElementById("shadow-wrapper");
     
@@ -32,7 +32,7 @@ function onJqueryInitiated() {
         // This works
         h1.innerHTML = "Updated with vanilla";
       console.log(h1);
-    }*/
+    }
     // Vanilla update working
     const elementRef = document.getElementById("shadow-wrapper");
     const firstHeading = elementRef.shadowRoot.getElementById("one");
@@ -43,6 +43,7 @@ function onJqueryInitiated() {
     const shadowRoot = shadowWrapper[0].shadowRoot;
     const secondHeading = $("#two", shadowRoot);
     secondHeading.text(secondHeading.html() + " jquery update");
+    */
 }
 
 
