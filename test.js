@@ -17,6 +17,7 @@ function onJqueryInitiated() {
         const shadowEl = $(shadowRoot.innerHTML);
         const h1 = shadowEl.find("h1");
         console.log("jQuery", h1);
+                // This doesn not work
         h1.html(h1.innerHtml + " (Im in a shadow dom)");
     } else {
         console.log('Cant find el');        
@@ -28,6 +29,8 @@ function onJqueryInitiated() {
     if (w) {
       console.log(w);
       const h1 = w.shadowRoot?.querySelector("h1");
+        // This works
+        h1.innerHTML = "Updated with vanilla";
       console.log(h1);
     }
 }
