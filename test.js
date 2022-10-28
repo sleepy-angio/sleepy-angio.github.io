@@ -15,7 +15,7 @@ function onJqueryInitiated() {
     if (shadowWrapper && shadowWrapper[0].shadowRoot) {
         const shadowRoot = shadowWrapper[0].shadowRoot;
         const shadowEl = $(shadowRoot.innerHTML);
-        const h1 = $("h1", shadowRoot);;
+        const h1 = $("h1", shadowRoot);
 
         h1.text(h1.html() + " jquery update in a shadow dom");
     } else {
