@@ -18,7 +18,7 @@ function onJqueryInitiated() {
         const h1 = shadowEl.find("h1")[0];
         console.log("jQuery", h1);
                 // This doesn not work
-        h1.html(h1.innerHtml + " (Im in a shadow dom)");
+        h1.text(h1.html() + " jquery update in a shadow dom");
     } else {
         console.log('Cant find el');        
     }
