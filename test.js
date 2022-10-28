@@ -10,7 +10,7 @@ function defer(method) {
 
 function onJqueryInitiated() {
     // jQuery
-    const shadowWrapper = $('#shadow-wrapper');   
+   /* const shadowWrapper = $('#shadow-wrapper');   
     
     if (shadowWrapper && shadowWrapper[0].shadowRoot) {
         const shadowRoot = shadowWrapper[0].shadowRoot;
@@ -32,7 +32,16 @@ function onJqueryInitiated() {
         // This works
         h1.innerHTML = "Updated with vanilla";
       console.log(h1);
-    }
+    }*/
+    // Vanilla update working
+    const firstHeading = elementRef.shadowRoot.getElementById("one");
+    firstHeading.innerHTML = firstHeading.innerHTML + " vanilla update";
+
+    // jQuery update
+    const shadowWrapper = $('#shadow-wrapper'); 
+    const shadowRoot = shadowWrapper[0].shadowRoot;
+    const secondHeading = $("#two", shadowRoot);
+    secondHeading.text(secondHeading.html() + " jquery update");
 }
 
 
