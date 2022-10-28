@@ -14,9 +14,9 @@ function onJqueryInitiated() {
     
     console.log(shadowWrapper, w);
     
-    if (shadowWrapper && shadowWrapper.shadowRoot) {
-        const h1 = shadowWrapper.shadowRoot.find("h1");
-        console.log(h1);
+    if (shadowWrapper && shadowWrapper[0].shadowRoot) {
+        const h1 = shadowWrapper[0].shadowRoot.find("h1");
+        console.log("j", h1);
     } else {
         console.log('Cant find el');        
     }
