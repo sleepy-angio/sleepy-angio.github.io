@@ -9,9 +9,13 @@ function defer(method) {
 }
 
 function onJqueryInitiated() {
-    const cardContainer = $('#fund-grid-container')
-     const tableContainer = $('#fund-table-container')
-     console.log(cardContainer, tableContainer);
+    const shadowWrapper = $('#shadow-wrapper')
+    if (shadowWrapper && shadowWrapper.shadowRoot) {
+        const h1 = shadowWrapper.shadowRoot.find("h1");
+        console.log(h1);
+    } else {
+        console.log('Cant find el');        
+    }
 }
 
 
