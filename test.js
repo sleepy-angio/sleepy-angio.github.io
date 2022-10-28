@@ -16,12 +16,14 @@ function onJqueryInitiated() {
         const shadowRoot = shadowWrapper[0].shadowRoot;
         const shadowEl = $(shadowRoot.innerHTML);
         const h1 = $("h1", shadowRoot);;
-        console.log("jQuery", h1);
-                // This doesn not work
+
         h1.text(h1.html() + " jquery update in a shadow dom");
     } else {
         console.log('Cant find el');        
     }
+    
+    
+    
     /* 
     // Vanilla
     const w = document.getElementById("shadow-wrapper");
