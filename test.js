@@ -34,7 +34,7 @@ function onJqueryInitiated() {
       console.log(h1);
     }*/
     // Vanilla update working
-    const elementRef = $('#shadow-wrapper');   
+    const elementRef = document.getElementById("shadow-wrapper");
     const firstHeading = elementRef.shadowRoot.getElementById("one");
     firstHeading.innerHTML = firstHeading.innerHTML + " vanilla update";
 
