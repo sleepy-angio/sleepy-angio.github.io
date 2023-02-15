@@ -16,14 +16,14 @@
       const ismob = document.getElementById("isMobile");
       console.log(useragent, ismob);
       if (useragent) {
-        console.log("a");
+      console.log(navigator.userAgent);
         useragent.innerHTML = navigator.userAgent;
       }
       if (ismob) {
-                console.log("b");
-        useragent.innerHTML = isMobile();
+                console.log(isMobile());
+        ismob.innerHTML = isMobile();
       }
-      console.log(navigator.userAgent);
+
     </script>
 </body>
 </html>
