@@ -7,21 +7,21 @@
   <p id="useragent">TBR</p>
     <p id="isMobile">TBR</p>
   
-    <script type="text/javascript">
-    function isMobile() {
-  const isPad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2;
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || isPad;
-}
-  const useragent =  document.getElementById("useragent");
-    const ismob =  document.getElementById("isMobile");
-      
+       <script type="text/javascript">
+      function isMobile() {
+        const isPad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2;
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || isPad;
+      }
+      const useragent = document.getElementById("useragent");
+      const ismob = document.getElementById("isMobile");
+      console.log(useragent, ismob);
       if (useragent) {
-        useragent.innerHTML = navigator.userAgent; 
+        useragent.innerHTML = navigator.userAgent;
       }
-            if (ismob) {
-        useragent.innerHTML = isMobile(); 
+      if (ismob) {
+        useragent.innerHTML = isMobile();
       }
-        console.log(navigator.userAgent);
-  </script>
+      console.log(navigator.userAgent);
+    </script>
 </body>
 </html>
