@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <script type="text/javascript">
-    alert(navigator.userAgent);
-        console.log(navigator.userAgent);
-  </script>
+
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+  <p id="useragent">TBR</p>
+    <p id="isMobile">TBR</p>
+  
+    <script type="text/javascript">
+    function isMobile() {
+  const isPad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2;
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || isPad;
+}
+  const useragent =  document.getElementById("useragent");
+    const ismob =  document.getElementById("isMobile");
+      
+      if (useragent) {
+        useragent.innerHTML = navigator.userAgent; 
+      }
+            if (ismob) {
+        useragent.innerHTML = isMobile(); 
+      }
+        console.log(navigator.userAgent);
+  </script>
 </body>
 </html>
