@@ -16,9 +16,11 @@
       const ismob = document.getElementById("isMobile");
       console.log(useragent, ismob);
       if (useragent) {
+        console.log("a");
         useragent.innerHTML = navigator.userAgent;
       }
       if (ismob) {
+                console.log("b");
         useragent.innerHTML = isMobile();
       }
       console.log(navigator.userAgent);
